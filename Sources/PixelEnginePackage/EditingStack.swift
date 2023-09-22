@@ -229,6 +229,8 @@ extension EditingStack {
             public var highlightShadowTint: FilterHighlightShadowTint?
             public var hls:FilterHLS?
             
+            public var hue:FilterHue?
+            
             func makeFilters() -> [Filtering] {
                 return ([
                     
@@ -253,6 +255,7 @@ extension EditingStack {
                     highlightShadowTint,
                     hls,
                     whiteBalance,
+                    hue,
                     ] as [Optional<Filtering>])
                     .compactMap { $0 }
             }
